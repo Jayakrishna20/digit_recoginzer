@@ -40,6 +40,10 @@ A web-based application that recognizes handwritten digits drawn by the user. Th
     ```
     The app will start at `http://127.0.0.1:5000/`.
 
+## 📊 Dataset
+
+The data used for training this model is from the [Digit Recognizer Kaggle Competition](https://www.kaggle.com/competitions/digit-recognizer/data).
+
 ## 🧠 Training the Model
 
 The model is pre-trained and saved as `model.pkl`. If you wish to retrain it:
@@ -58,6 +62,6 @@ The model is pre-trained and saved as `model.pkl`. If you wish to retrain it:
 
 - `app.py`: Flask application entry point.
 - `model_utils.py`: Core neural network functions (ReLU, Softmax, Forward/Back Prop).
-- `train.py`: Script to train the model using `train.csv`.
+- `train.py`: Script to train the model.
 - `static/`: CSS and JavaScript files.
 - `templates/`: HTML templates.
