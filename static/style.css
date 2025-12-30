@@ -1,0 +1,127 @@
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary-bg: #2d2d2d;
+  --text-color: #ffffff;
+  --text-muted: #a1a1aa;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 350px;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+}
+
+header p {
+  color: var(--text-muted);
+  margin: 0 0 1.5rem 0;
+}
+
+.canvas-wrapper {
+  background-color: #000;
+  border: 2px solid var(--secondary-bg);
+  border-radius: 0.5rem;
+  display: inline-block;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  background-color: black;
+}
+
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn.secondary {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+}
+
+.btn.secondary:hover {
+  background-color: #3d3d3d;
+}
+
+#result-area {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--secondary-bg);
+}
+
+.hidden {
+  display: none;
+}
+
+#result-area h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+#prediction {
+  color: var(--primary-color);
+}
+
+.confidence-bar {
+  height: 6px;
+  background-color: var(--secondary-bg);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+#confidence-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+#confidence-text {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
